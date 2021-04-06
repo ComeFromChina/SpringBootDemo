@@ -29,6 +29,12 @@ public class WebFluxController {
 
         return Flux.fromIterable(map.entrySet().stream().map(Map.Entry::getValue).collect(Collectors.toList()));
     }
+
+    @GetMapping("/getAll2")
+    public Flux getAllUser2(){
+
+        return Flux.fromIterable(map.entrySet().stream().map(Map.Entry::getValue).collect(Collectors.toList()));
+    }
     @GetMapping("/{id}")
     public Mono<User> getUserById(@PathVariable("id") Long id){
         return Mono.just(map.get(id));
