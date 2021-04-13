@@ -1,0 +1,14 @@
+server:
+  port: 8003
+
+
+
+
+
+
+# JWT相关配置
+jwt:
+  headerKey: Authorization
+  tokenHeader: 'Bearer ' # 注意有一个空格
+  keystorePassWord: 123456 # keystore文件密码、私钥密码（文件密码和私钥密码设置为相同）
+  expirationSeconds: 60 #token过期时间，单位s，默认86400s（24h）
