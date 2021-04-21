@@ -30,7 +30,7 @@
     <style type="text/css">
         .main{
             width: 1200px;
-            height: 100%;
+            height: auto;
             margin: 20px auto;
             padding: 20px;
             border: 1px solid red;
