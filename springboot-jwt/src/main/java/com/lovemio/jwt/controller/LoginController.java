@@ -1,17 +1,12 @@
 package com.lovemio.jwt.controller;
 
-import com.lovemio.jwt.config.JwtConfig;
 import com.lovemio.jwt.entity.UserInfo;
 import com.lovemio.jwt.util.JwtUtil;
 import com.lovemio.jwt.util.ResultInfo;
-import io.jsonwebtoken.Claims;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.transform.Result;
 import java.util.HashMap;
 import java.util.Map;
 

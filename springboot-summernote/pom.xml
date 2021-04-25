@@ -11,7 +11,7 @@
     <groupId>com.lovemio.summernote</groupId>
     <artifactId>springboot-summernote</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <!--<packaging>war</packaging>-->
     <name>springboot-summernote</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -44,11 +44,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!--解决JSP及时刷新-->
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>springloaded</artifactId>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>8.5.20</version>
         </dependency>
     </dependencies>
 
