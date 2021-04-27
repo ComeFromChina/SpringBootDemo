@@ -1,0 +1,33 @@
+#指定端口，默认8080
+server:
+  port: 9000
+#配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    username: root
+    password: root
+
+#配置mybatisplus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰功能
+    auto-mapping-behavior: full #mybatis核心配置文件中settings中配置,指定 MyBatis 应如何自动映射列到字段或属性。 NONE 表示取消自动映射；PARTIAL 只会自动映射没有定义嵌套结果集映射的结果集。 FULL 会自动映射任意复杂的结果集（无论是否嵌套）。默认是partial，这是一种全局设置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: true #是否控制台 print mybatis-plus 的 LOGO
+    db-config:
+      id-type: auto #id 类型
+      table-underline: true #表名是否使用下划线命名，默认数据库表使用下划线命名
+#      logic-delete-value: 1 #逻辑已删除值默认1
+#      logic-not-delete-value: 0 #逻辑未删除值默认0
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: com.lovemio.mybatisplus.entity #实体的包路径，写resultType时可以直接写类名，不用再写全类名
+
+#设置日志输出级别
+logging:
+  level:
+    root: info
+    com.lovemio.mybatisplus: debug
